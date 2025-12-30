@@ -18,8 +18,6 @@ Focused on stability, performance, and clean aesthetics.
 
 ## 📸 Preview
 
-> Replace these with your own images / videos
-
 ### Desktop
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7872d700-ae91-45c7-97b4-99c7d2762658" />
 
@@ -45,6 +43,5 @@ NVIDIA proprietary drivers (or AMD/Intel)
 git, sudo, curl
 
 🎥 **Video demo:**  
-Upload an `.mp4` or `.webm` to GitHub and link it here:
 ```md
-[▶ Watch Demo](https://github.com/USERNAME/REPO/assets/VIDEO_ID)
+[▶ Watch Demo]
