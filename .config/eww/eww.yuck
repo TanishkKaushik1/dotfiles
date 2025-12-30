@@ -1,0 +1,59 @@
+;; =========================
+;; MUSIC LISTENER
+;; =========================
+(deflisten music_title
+  :initial "No music playing"
+  "playerctl metadata --format '{{ title }}' 2>/dev/null || echo 'No music playing'"
+)
+
+;; =========================
+;; OVERLAY
+;; =========================
+(defwindow profile_overlay
+  :monitor 0
+  :anchor "top left right bottom"
+  :exclusive false
+  :stacking "fg"
+  :windowtype "dock"
+
+  (eventbox
+    :onclick "eww close profile_panel && eww close profile_overlay"
+    (box)
+  )
+)
+
+;; =========================
+;; PROFILE PANEL (STANDARD)
+;; =========================
+(defwindow profile_panel
+  :monitor 0
+  :anchor "right"
+  :exclusive false
+  :stacking "fg"
+  :windowtype "dock"
+
+  :geometry (geometry
+    :width "360px"
+    :height "100%"
+  )
+
+  (box
+    :orientation "vertical"
+    :spacing 16
+    :class "panel-root"
+
+    (label :text "Profile (Eww placeholder)")
+
+    (box :expand true)
+
+    (label :text "Music:")
+    (label :text music_title)
+
+    (box :expand true)
+
+    (button
+      :onclick "eww close profile_panel && eww close profile_overlay"
+      (label :text "Close")
+    )
+  )
+)

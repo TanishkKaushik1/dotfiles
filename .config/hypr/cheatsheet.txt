@@ -1,0 +1,31 @@
+󰌌 WINDOW & SYSTEM
+
+SUPER + Q        → Open Terminal
+SUPER + C        → Close Active Window
+SUPER + M        → Exit Hyprland
+SUPER + E        → Open File Manager
+SUPER + V        → Toggle Floating Window
+
+󰌌 WINDOW LAYOUT (DWINDLE)
+
+SUPER + P        → Toggle Pseudo Tiling
+SUPER + J        → Toggle Split Direction
+
+󰌌 APP LAUNCHERS
+
+SUPER + R        → App Launcher (Rofi)
+SUPER + W        → Wallpaper Picker (Waypaper)
+
+󰌌 POWER MENU
+
+SUPER + X        → Power Menu (wlogout)
+
+󰌌 SCREENSHOT
+
+SUPER + S        → Screenshot Tool
+
+󰌌 NOTIFICATIONS (SwayNC)
+
+SUPER + N        → Toggle Notification Center
+SUPER + SHIFT + N → Clear All Notifications
+SUPER + CTRL + N → Toggle Do Not Disturb

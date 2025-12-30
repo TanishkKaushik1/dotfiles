@@ -1,0 +1,11 @@
+.cache/
+.local/
+.mozilla/
+Code/
+obs-studio/
+dconf/
+session/
+trashrc
+pulse/
+yay/
+*.log

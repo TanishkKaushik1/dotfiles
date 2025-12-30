@@ -1,0 +1,67 @@
+/* =========================
+   BLURRED BACKGROUND WLOGOUT
+   ========================= */
+
+window {
+    /* semi-transparent so Hyprland can blur behind */
+   background-color: rgba(33, 33, 37, 0.45);
+
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    color: #ffffff;
+}
+
+/* ICON-ONLY BUTTONS */
+button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+
+    margin: 12px;
+    padding: 18px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 28%;
+
+    transition: background-size 0.2s ease;
+}
+
+/* SUBTLE HOVER ZOOM */
+button:hover {
+    background-size: 34%;
+}
+
+/* HIDE TEXT (ICON ONLY) */
+button label {
+    opacity: 0;
+    font-size: 0;
+}
+
+/* =========================
+   ICONS
+   ========================= */
+
+/* Shutdown */
+#shutdown {
+    background-image: image(url("file:///home/tanishk/.config/wlogout/icons/power.png"));
+}
+#shutdown:hover {
+    background-image: image(url("file:///home/tanishk/.config/wlogout/icons/power-hover.png"));
+}
+
+/* Reboot */
+#reboot {
+    background-image: image(url("file:///home/tanishk/.config/wlogout/icons/restart.png"));
+}
+#reboot:hover {
+    background-image: image(url("file:///home/tanishk/.config/wlogout/icons/restart-hover.png"));
+}
+
+/* Lock */
+#lock {
+    background-image: image(url("file:///home/tanishk/.config/wlogout/icons/lock.png"));
+}
+#lock:hover {
+    background-image: image(url("file:///home/tanishk/.config/wlogout/icons/lock-hover.png"));
+}

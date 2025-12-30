@@ -1,0 +1,7 @@
+@import "/home/tanishk/.cache/wal/rofi-clean.rasi";
+
+window {
+    width: 400px;
+}
+
+

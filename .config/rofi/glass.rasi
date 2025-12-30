@@ -1,0 +1,90 @@
+/* =========================
+   Glass Compact Rofi Theme
+   ========================= */
+
+* {
+    font: "CaskaydiaCove Nerd Font 11";
+
+    bg: rgba(15, 18, 25, 0.75);
+    bg-alt: rgba(25, 28, 38, 0.85);
+    fg: #eaeaea;
+    fg-dim: #9aa0b2;
+    accent: #5fd7ff;
+}
+
+/* ---------- Window ---------- */
+window {
+    location: center;
+    width: 420px;
+    border-radius: 14px;
+    background-color: @bg;
+}
+
+/* ---------- Main ---------- */
+mainbox {
+    padding: 10px;
+    spacing: 6px;
+    background-color: transparent;
+}
+
+/* ---------- Input ---------- */
+inputbar {
+    padding: 6px 12px;
+    border-radius: 12px;
+    background-color: rgba(55, 85, 130, 0.32);
+}
+
+prompt { enabled: false; }
+textbox-prompt-separator { enabled: false; }
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    cursor-color: rgba(200, 220, 255, 0.6);
+    cursor-width: 1px;
+}
+
+/* ---------- List ---------- */
+listview {
+    lines: 6;
+    spacing: 4px;
+    scrollbar: false;
+    background-color: transparent;
+}
+
+/* ---------- Elements ---------- */
+element {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal,
+element active,
+element urgent {
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: #000000;
+}
+
+/* ---------- Text & Icon ---------- */
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-icon {
+    size: 22px;
+    background-color: transparent;
+    margin: 0 8px 0 0;
+}
+
+/* ---------- Message ---------- */
+message {
+    background-color: transparent;
+    text-color: @fg-dim;
+}

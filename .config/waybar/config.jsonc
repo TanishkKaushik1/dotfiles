@@ -1,0 +1,155 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 38,
+   "exclusive": true,
+  "passthrough": false,
+
+  "modules-left": [
+    "custom/profile",
+    "clock",
+    "wlr/taskbar",
+    "mpris",
+    "custom/clipboard"
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces",
+    "custom/colorpicker",
+    "custom/cheatsheet"
+  ],
+
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "battery"
+  ],
+
+  /* =====================
+     WORKSPACES
+     ===================== */
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "*": 1
+    }
+  },
+
+  /* =====================
+     CLOCK
+     ===================== */
+  "clock": {
+    "format": " {:%H:%M}",
+    "format-alt": " {:%d %b %Y}",
+    "tooltip": false
+  },
+
+  /* =====================
+     NETWORK
+     ===================== */
+  "network": {
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤮",
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    "tooltip": false,
+    "on-click": "iwgtk"
+  },
+
+  /* =====================
+     BLUETOOTH
+     ===================== */
+  "bluetooth": {
+    "format": "",
+    "format-connected": " {num_connections}",
+    "tooltip": false,
+    "on-click": "blueman-manager"
+  },
+
+  /* =====================
+     AUDIO
+     ===================== */
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": ["󰕿","󰖀","󰕾"]
+    },
+    "tooltip": false,
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5"
+  },
+
+  /* =====================
+     TASKBAR
+     ===================== */
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "spacing": 8,
+    "tooltip": false,
+    "on-click": "activate",
+    "on-click-middle": "close"
+  },
+
+  /* =====================
+     MUSIC
+     ===================== */
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "{player_icon}",
+    "player-icons": {
+      "spotify": "󰓇",
+      "vlc": "󰕼",
+      "default": "󰐊"
+    }
+  },
+
+  /* =====================
+     PROFILE
+     ===================== */
+"custom/profile": {
+  "format": " ",
+  "tooltip": false,
+  "on-click": "/usr/bin/hyprlock"
+}
+,
+
+  /* =====================
+     BATTERY
+     ===================== */
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    }
+  },
+
+  /* =====================
+     UTILS
+     ===================== */
+"custom/colorpicker": {
+  "format": "🎨",
+  "tooltip": false,
+  "on-click": "~/.config/waybar/palette.sh"
+}
+,
+
+  "custom/clipboard": {
+    "format": "󰅌",
+    "tooltip": false,
+    "on-click": "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+  },
+
+  "custom/cheatsheet": {
+    "format": "󰌌",
+    "tooltip": false,
+    "on-click": "/home/tanishk/.config/waybar/scripts/cheatsheet.sh"
+  }
+}
